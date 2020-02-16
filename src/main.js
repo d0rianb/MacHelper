@@ -68,7 +68,7 @@ let app = new Vue({
     methods: {
         generateArticles: async function() {
             let articles = []
-            await fetch('../ressources/articles/shortcuts.json')
+            await fetch('./MacHelper/ressources/articles/shortcuts.json')
                 .then(data => data.json())
                 .then(json => {
                     for (let app in json) {
