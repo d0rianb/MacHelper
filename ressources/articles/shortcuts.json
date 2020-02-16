@@ -1,0 +1,38 @@
+{
+    "Mac": {
+        "cmd-space": "Spotlight",
+        "fn-backspace": "`Delete` de Windows",
+        "alt-anyArrow": "Déplace le curseur d'un mot dans la direction",
+        "cmd-anyArrow": "Déplace le curseur jusqu'à l'extrémité de la ligne",
+        "alt-maj-anyArrow": "Sélectionne du curseur jusqu'à la fin du mot",
+        "cmd-maj-anyArrow": "Sélectionne du curseur jusqu'à la fin de la ligne",
+        "alt-maj-f12": "Augmente le volume d'un quart",
+        "alt-maj-f11": "Diminue le volume d'un quart",
+        "alt-maj-f1": "Augmente la luminosité d'un quart",
+        "alt-maj-f1": "Diminue la luminosité d'un quart",
+        "ctrl-rightArrow": "Switch vers le bureau de droite",
+        "ctrl-leftArrow": "Switch vers le bureau de gauche"
+    },
+    "Finder": {
+        "cmd-n": "Ouvre une nouvelle fenêtre Finder",
+        "cmd-maj-n": "Crée un nouveau dossier",
+        "cmd-maj-g": "Ouvre une fenêtre `Aller au dossier`"
+    },
+    "Chrome": {
+        "cmd-t": "Nouvel onglet",
+        "cmd-w": "Ferme l'onglet actif",
+        "cmd-alt-rightArrow": "Switch vers l'onglet de droite",
+        "cmd-alt-leftArrow": "Switch vers l'onglet de gauche"
+    },
+    "Magnet": {
+        "ctrl-alt-rightArrow": "Redimensionne la fenêtre sur la moitié droite de l'écran",
+        "ctrl-alt-leftArrow": "Redimensionne la fenêtre sur la moitié droite de l'écran",
+        "ctrl-alt-upArrow": "Redimensionne la fenêtre sur la moitié supérieure de l'écran",
+        "ctrl-alt-downArrow": "Redimensionne la fenêtre sur la moitié inférieure de l'écran"
+    },
+    "Atom": {
+        "cmd-maj-p": "Ouvre le `command launcher`",
+        "cmd-d": "sélectionne le mot puis sélectionne les occurences suivantes",
+        "cmd-u": "désélectionne la dernière occurence"
+    }
+}

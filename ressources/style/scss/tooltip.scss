@@ -1,0 +1,13 @@
+@import 'variables';
+
+.tooltip {
+  display: none;
+  position: absolute;
+  font-size: 0.8em;
+  padding: 0.4em;
+  border-radius: 4px;
+  background-color: rgba(10, 10, 10, .8);
+  text-align: center;
+  vertical-align: middle;
+  color: $text-color-light;
+}

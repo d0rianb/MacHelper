@@ -1,0 +1,244 @@
+/* Color */
+/* Text */
+/* Others */
+/* Functions */
+/* Color */
+/* Text */
+/* Others */
+/* Functions */
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0.5em;
+  background-color: #0277bd;
+  color: white;
+  box-shadow: 0 1px 3px 2px rgba(1, 55, 88, 0.25);
+}
+header .title {
+  font-size: 3em;
+  font-weight: 300;
+}
+header .menu {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+header .menu-list {
+  display: flex;
+  margin: 0;
+  padding: 0.5em 2em;
+}
+header .menu-list .container {
+  display: flex;
+  flex-flow: row;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+header .menu-list .container hr {
+  position: absolute;
+  bottom: -0.75em;
+  left: 1em;
+  height: 0.15em;
+  width: calc(25% - 2em);
+  margin: 0;
+  background: white;
+  border: none;
+  transition: 300ms ease-in-out;
+}
+header .menu-list .container > :nth-child(1):hover ~ hr {
+  margin-left: 0%;
+}
+header .menu-list .container > :nth-child(2):hover ~ hr {
+  margin-left: 25%;
+}
+header .menu-list .container > :nth-child(3):hover ~ hr {
+  margin-left: 50%;
+}
+header .menu-list .container > :nth-child(4):hover ~ hr {
+  margin-left: 75%;
+}
+header .menu-item {
+  display: inline-block;
+  list-style: none;
+  overflow: auto;
+}
+header .menu-item a {
+  padding: 0.5em 1.5em;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+header .menu .search {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  padding: 1em;
+  width: 3em;
+  transition: width 300ms ease;
+}
+header .menu .search i {
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+  user-select: none;
+}
+header .menu .search input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  outline: 0;
+  font-size: 1em;
+  color: white;
+  padding: 0.35em 0;
+  background: transparent;
+  transition: width 1s ease;
+}
+header .menu .search input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Color */
+/* Text */
+/* Others */
+/* Functions */
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+footer p {
+  margin: 0;
+  padding: 0.5em 1em;
+  font-size: 0.75em;
+  text-align: center;
+  color: #bdbdbd;
+}
+
+/* Color */
+/* Text */
+/* Others */
+/* Functions */
+.tooltip {
+  display: none;
+  position: absolute;
+  font-size: 0.8em;
+  padding: 0.4em;
+  border-radius: 4px;
+  background-color: rgba(10, 10, 10, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  font-size: 0.9em;
+  color: #333333;
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 1px 0 #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 2px #ffffff;
+  background-color: #f7f7f7;
+  cursor: help;
+  transition: all 100ms ease;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 2vh;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  width: 95vw;
+  margin: 1em auto;
+  background-color: #f5f5f5c7;
+  box-shadow: 0 1px 1px 2px rgba(194, 194, 194, 0.25);
+}
+main .title {
+  margin: 1em;
+}
+main .title span {
+  font-size: 2.6em;
+  font-weight: 300;
+  color: #757575;
+}
+main .sub-title {
+  padding: 0.25em 0.5em;
+}
+main .sub-title p {
+  margin-left: 1em;
+  padding-left: 0.4em;
+  font-size: 1em;
+  color: #757575;
+  border-left: 1px solid #757575;
+}
+main .article-list {
+  display: flex;
+  flex-flow: column;
+  margin: 1em 0.5em;
+}
+main .article-list .app {
+  margin: 0.25em 0.5em;
+}
+main .article-list .app-title {
+  font-size: 1.25em;
+}
+main .article-list .app table {
+  margin: 0.5em 0.5em 2em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 75%;
+}
+main .article-list .app table tr {
+  transition: background-color 100ms ease;
+}
+main .article-list .app table tr:nth-child(odd) {
+  background-color: rgba(232, 232, 232, 0.7803921569);
+}
+main .article-list .app table tr:nth-child(odd):hover {
+  background-color: rgba(226, 226, 226, 0.7803921569);
+}
+main .article-list .app table tr:nth-child(even):hover {
+  background-color: rgba(239, 239, 239, 0.7803921569);
+}
+main .article-list .app table tr:hover kbd {
+  border-color: #bfbfbf;
+  background-color: #fcfcfc;
+}
+main .article-list .app table tr td {
+  padding: 0.35em 0.5em;
+}
+main .article-list .app table tr .key {
+  width: 30%;
+}
+main .article-list .app table tr .value {
+  width: 70%;
+}
+
+/*# sourceMappingURL=main.css.map */

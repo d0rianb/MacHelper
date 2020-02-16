@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ appName }}</title>
+  <link rel="stylesheet" href="ressources/style/css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="title">{{ appName }}</div>
+      <div class="menu">
+        <!-- TODO: echanger le nav et le ul -->
+        <ul class="menu-list">
+          <nav class="container">
+            <li class="menu-item"><a href="#">Lien 1</a></li>
+            <li class="menu-item"><a href="#">Lien 2</a></li>
+            <li class="menu-item"><a href="#">Lien 3</a></li>
+            <li class="menu-item"><a href="#">Lien 4</a></li>
+            <hr />
+          </nav>
+        </ul>
+        <div class="search">
+          <input type="input" v-model="searchValue" placeholder="Search" name="search" />
+          <i class="material-icons">search</i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="title"><span>Accueil</span></div>
+      <div class="sub-title">
+        <p>Moult raccourci clavier pour mac</p>
+      </div>
+      <div class="article-list">
+        <div v-for="app in containSearchValue" :key="app.id" class="app">
+          <div class="app-title">{{ app.title }}</div>
+          <div class="tooltip tooltip-key"></div>
+          <table>
+            <tbody>
+              <tr v-for="(value, key) in app.content">
+                <td class="key" v-html="$options.filters.toKey(key, false)"></td>
+                <td class="value">{{ value }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Dorian&Co © {{ new Date(Date.now()).getFullYear() }}</p>
+    </footer>
+  </div>
+  <script src="./src/main.js" charset="utf-8"></script>
+</body>
+
+</html>

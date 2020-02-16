@@ -1,0 +1,129 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'tooltip';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  border-radius: 3px;
+  border: 1px solid rgb(204, 204, 204);
+  font-size: 0.9em;
+  color: rgb(51, 51, 51);
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 1px 0 #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2), inset 0 0 0 2px #ffffff;
+  background-color: rgb(247, 247, 247);
+  cursor: help;
+  transition: all 100ms ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 2vh;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  width: 95vw;
+  margin: 1em auto;
+  background-color: $color-ultra-light-grey;
+  box-shadow: 0 1px 1px 2px shadowof($color-ultra-light-grey);
+
+  .title {
+    margin: 1em;
+
+    span {
+      font-size: 2.6em;
+      font-weight: 300;
+      color: $color-grey;
+    }
+  }
+
+  .sub-title {
+    padding: 0.25em 0.5em;
+
+    p {
+      margin-left: 1em;
+      padding-left: 0.4em;
+      font-size: 1em;
+      color: $color-grey;
+      border-left: 1px solid $color-grey;
+    }
+  }
+
+  .article-list {
+    display: flex;
+    flex-flow: column;
+    margin: 1em 0.5em;
+
+    .app {
+      margin: 0.25em 0.5em;
+
+      &-title {
+        font-size: 1.25em;
+      }
+
+      table {
+        margin: 0.5em 0.5em 2em;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 75%;
+
+        tr {
+          transition: background-color 100ms ease;
+
+          &:nth-child(odd) {
+            background-color: darken($color-ultra-light-grey, 5%);
+
+            &:hover {
+              background-color: darken($color-ultra-light-grey, 7.5%);
+
+            }
+          }
+
+          &:nth-child(even):hover {
+            background-color: darken($color-ultra-light-grey, 2.5%);
+          }
+
+          &:hover {
+            kbd {
+              border-color: darken(rgb(204, 204, 204), 5%);
+              background-color: rgb(252, 252, 252);
+            }
+          }
+
+          td {
+            padding: 0.35em 0.5em;
+          }
+
+          .key {
+            width: 30%;
+          }
+
+          .value {
+            width: 70%;
+
+          }
+        }
+
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,12 @@
+{
+    "name": "ressources",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "cd ressources/style/; sass --watch scss/main.scss:css/main.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
