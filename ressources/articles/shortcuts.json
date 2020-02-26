@@ -32,7 +32,7 @@
     },
     "Atom": {
         "cmd-maj-p": "Ouvre le `command launcher`",
-        "cmd-d": "sélectionne le mot puis sélectionne les occurences suivantes",
-        "cmd-u": "désélectionne la dernière occurence"
+        "cmd-d": "Sélectionne le mot puis sélectionne les occurences suivantes",
+        "cmd-u": "Désélectionne la dernière occurence"
     }
 }

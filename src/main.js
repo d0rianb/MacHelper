@@ -34,6 +34,11 @@ const keyLabels = {
     'anyArrow': 'Any Arrow'
 }
 
+const hintsArray = [
+    'Vous pouvez faire une recherche par racourci clavier en la tappant dans la barre de recherche',
+    "La barre de recherche est dynamique"
+]
+
 let app = new Vue({
     el: '#app',
     created: function() {
@@ -61,8 +66,11 @@ let app = new Vue({
     data: function() {
         return {
             appName: 'MacHelper',
+            searchInputActive: false,
             articles: [],
-            searchValue: ''
+            searchValue: '',
+            searchModifiers: '',
+            hints: hintsArray
         }
     },
     methods: {
@@ -80,12 +88,20 @@ let app = new Vue({
                     }
                 })
             this.$set(this.$data, 'articles', articles)
+        },
+        onFocus: function(e) {
+            this.searchInputActive = true
+        },
+        onBlur() {
+            this.searchInputActive = false
         }
+
     },
     computed: {
         containSearchValue: function() {
             let containsValueArticle = []
-            let value = this.$data.searchValue.toLowerCase()
+            let value = this.searchValue.toLowerCase()
+            let modifiers = this.searchModifiers
             for (let app of this.$data.articles) {
                 let newApp = {
                     id: app.id,
@@ -93,7 +109,7 @@ let app = new Vue({
                     content: {}
                 }
                 for (let shortcut in app.content) {
-                    if (app.content[shortcut].toLowerCase().includes(value)) {
+                    if (app.content[shortcut].toLowerCase().includes(value) && shortcut.includes(modifiers)) {
                         newApp.content[shortcut] = app.content[shortcut]
                     }
                 }
@@ -102,6 +118,10 @@ let app = new Vue({
                 }
             }
             return containsValueArticle
+        },
+        hint: function() {
+            let index = Math.round(Math.random() * (this.hints.length - 1))
+            return this.hints[index]
         }
     }
 })
@@ -135,7 +155,7 @@ window.onload = () => {
         searchInput.focus()
     })
     window.addEventListener('keydown', e => {
-        if (e.key === '/') {
+        if (e.key === '/' && document.activeElement !== searchInput) {
             search.style.width = '15em'
             searchInput.focus()
             e.preventDefault()
@@ -143,6 +163,26 @@ window.onload = () => {
         if (e.key === 'Escape') {
             search.style.width = '3em'
             searchInput.blur()
+        }
+        if (app.$data.searchInputActive) {
+            let modifiers = []
+            let cmd = e.metaKey
+            let ctrl = e.ctrlKey
+            let alt = e.altKey
+            let shift = e.shiftKey
+            cmd ? modifiers.push('cmd') : null
+            ctrl ? modifiers.push('ctrl') : null
+            alt ? modifiers.push('alt') : null
+            shift ? modifiers.push('maj') : null
+            if (modifiers.length > 0) {
+                let modifiersString = modifiers.join('-')
+                app.$set(app.$data, 'searchModifiers', modifiersString)
+            }
+        }
+    })
+    window.addEventListener('keyup', e => {
+        if (app.$data.searchInputActive) {
+            app.$set(app.$data, 'searchModifiers', '')
         }
     })
 }
