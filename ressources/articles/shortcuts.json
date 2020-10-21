@@ -16,13 +16,18 @@
     "Finder": {
         "cmd-n": "Ouvre une nouvelle fenêtre Finder",
         "cmd-maj-n": "Crée un nouveau dossier",
-        "cmd-maj-g": "Ouvre une fenêtre `Aller au dossier`"
+        "cmd-maj-g": "Ouvre une fenêtre `Aller au dossier`",
+        "cmd-ctrl-f": "Active/désactive le mode plein écran"
     },
     "Chrome": {
         "cmd-t": "Nouvel onglet",
         "cmd-w": "Ferme l'onglet actif",
         "cmd-alt-rightArrow": "Switch vers l'onglet de droite",
-        "cmd-alt-leftArrow": "Switch vers l'onglet de gauche"
+        "cmd-alt-leftArrow": "Switch vers l'onglet de gauche",
+        "ctrl-scroll": "Lecteur de PDF : Zoom"
+    },
+    "Safari": {
+
     },
     "Magnet": {
         "ctrl-alt-rightArrow": "Redimensionne la fenêtre sur la moitié droite de l'écran",

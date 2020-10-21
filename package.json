@@ -1,12 +1,12 @@
 {
-    "name": "ressources",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "name": "MacHelper",
+    "version": "0.1.0",
+    "description": "A simple single app page w/ Vue 2",
+    "main": "main.js",
     "scripts": {
         "sass": "cd ressources/style/; sass --watch scss/main.scss:css/main.css"
     },
     "keywords": [],
-    "author": "",
+    "author": "d0rianb <dorian.beauchesne@icloud.com",
     "license": "ISC"
 }

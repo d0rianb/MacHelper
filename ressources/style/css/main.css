@@ -17,10 +17,12 @@ header {
   color: white;
   box-shadow: 0 1px 3px 2px rgba(1, 55, 88, 0.25);
 }
+
 header .title {
   font-size: 3em;
   font-weight: 300;
 }
+
 header .menu {
   display: flex;
   flex-flow: row;
@@ -28,11 +30,13 @@ header .menu {
   justify-content: flex-end;
   height: 100%;
 }
+
 header .menu-list {
   display: flex;
   margin: 0;
   padding: 0.5em 2em;
 }
+
 header .menu-list .container {
   display: flex;
   flex-flow: row;
@@ -41,6 +45,7 @@ header .menu-list .container {
   width: 100%;
   height: 100%;
 }
+
 header .menu-list .container hr {
   position: absolute;
   bottom: -0.75em;
@@ -52,23 +57,29 @@ header .menu-list .container hr {
   border: none;
   transition: 300ms ease-in-out;
 }
-header .menu-list .container > :nth-child(1):hover ~ hr {
+
+header .menu-list .container> :nth-child(1):hover~hr {
   margin-left: 0%;
 }
-header .menu-list .container > :nth-child(2):hover ~ hr {
+
+header .menu-list .container> :nth-child(2):hover~hr {
   margin-left: 25%;
 }
-header .menu-list .container > :nth-child(3):hover ~ hr {
+
+header .menu-list .container> :nth-child(3):hover~hr {
   margin-left: 50%;
 }
-header .menu-list .container > :nth-child(4):hover ~ hr {
+
+header .menu-list .container> :nth-child(4):hover~hr {
   margin-left: 75%;
 }
+
 header .menu-item {
   display: inline-block;
   list-style: none;
   overflow: auto;
 }
+
 header .menu-item a {
   padding: 0.5em 1.5em;
   width: 100%;
@@ -76,6 +87,7 @@ header .menu-item a {
   color: white;
   text-decoration: none;
 }
+
 header .menu .search {
   display: flex;
   flex-flow: row;
@@ -84,12 +96,14 @@ header .menu .search {
   width: 3em;
   transition: width 300ms ease;
 }
+
 header .menu .search i {
   position: relative;
   top: 3px;
   cursor: pointer;
   user-select: none;
 }
+
 header .menu .search input {
   width: 100%;
   border: 0;
@@ -101,6 +115,7 @@ header .menu .search input {
   background: transparent;
   transition: width 1s ease;
 }
+
 header .menu .search input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -115,6 +130,7 @@ footer {
   left: 0;
   width: 100vw;
 }
+
 footer p {
   margin: 0;
   padding: 0.5em 1em;
@@ -191,17 +207,21 @@ main {
   background-color: #f5f5f5c7;
   box-shadow: 0 1px 1px 2px rgba(194, 194, 194, 0.25);
 }
+
 main .title {
   margin: 1em;
 }
+
 main .title span {
   font-size: 2.6em;
   font-weight: 300;
   color: #757575;
 }
+
 main .sub-title {
   padding: 0.25em 0.5em;
 }
+
 main .sub-title p {
   margin-left: 1em;
   padding-left: 0.4em;
@@ -209,48 +229,61 @@ main .sub-title p {
   color: #757575;
   border-left: 1px solid #757575;
 }
+
 main .article-list {
   display: flex;
   flex-flow: column;
   margin: 1em 0.5em;
 }
+
 main .article-list .app {
   margin: 0.25em 0.5em;
 }
+
 main .article-list .app-title {
   font-size: 1.25em;
 }
+
 main .article-list .app table {
   margin: 0.5em 0.5em 2em;
   border-collapse: collapse;
   border-spacing: 0;
   width: 70%;
 }
+
 main .article-list .app table tr {
   transition: background-color 100ms ease;
 }
+
 main .article-list .app table tr:nth-child(odd) {
   background-color: rgba(232, 232, 232, 0.7803921569);
 }
+
 main .article-list .app table tr:nth-child(odd):hover {
   background-color: rgba(226, 226, 226, 0.7803921569);
 }
+
 main .article-list .app table tr:nth-child(even):hover {
   background-color: rgba(239, 239, 239, 0.7803921569);
 }
+
 main .article-list .app table tr:hover kbd {
   border-color: #bfbfbf;
   background-color: #fcfcfc;
 }
+
 main .article-list .app table tr td {
   padding: 0.35em 0.5em;
 }
+
 main .article-list .app table tr .key {
   width: 30%;
 }
+
 main .article-list .app table tr .value {
   width: 70%;
 }
+
 main aside {
   position: fixed;
   right: 0;
